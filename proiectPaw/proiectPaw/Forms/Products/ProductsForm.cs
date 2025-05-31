@@ -1,4 +1,5 @@
 ﻿using proiectPaw.Entities;
+using proiectPaw.Others;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -18,6 +19,7 @@ namespace proiectPaw.Forms
             dataGridViewProducts.AutoGenerateColumns = false;
             SetupDataGridView();
             LoadProducts();
+            Helper.StyleDataGrid(dataGridViewProducts);
         }
         private void SetupDataGridView()
         {
@@ -122,7 +124,7 @@ namespace proiectPaw.Forms
         }
         private void DeleteProduct(Guid productId)
         {
-            var confirmResult = MessageBox.Show("Sigur vrei sa stergi acest produs?", "Confirmare stergere",MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show("Sigur vrei sa stergi acest produs?", "Confirmare stergere", MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
                 using (var conn = Database.CreateConnection())
@@ -146,7 +148,5 @@ namespace proiectPaw.Forms
                 }
             }
         }
-
-       
     }
 }

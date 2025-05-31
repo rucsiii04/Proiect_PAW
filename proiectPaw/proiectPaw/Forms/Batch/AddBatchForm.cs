@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proiectPaw.Others;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,9 @@ namespace proiectPaw.Forms
         public AddBatchForm()
         {
             InitializeComponent();
+            Helper.StyleButton(cancelButton);
+            Helper.StyleButton(saveButton);
+            Helper.StyleForm(this);
         }
         private void cancelButton_Click(object sender, EventArgs e)
         {
@@ -23,6 +27,11 @@ namespace proiectPaw.Forms
             if(!int.TryParse(quantityTextBox.Text, out int quantity) || quantity <= 0)
             {
                 MessageBox.Show("Introduceți o cantitate validă - numar pozitiv.");
+                return;
+            }
+            if (dateTimePickerExpirationDate.Value <= dateTimePickerProductionDate.Value)
+            {
+                MessageBox.Show("Data expirării trebuie să fie după data producției.");
                 return;
             }
             DateTime productionDate = dateTimePickerProductionDate.Value;

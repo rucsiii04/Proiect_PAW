@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proiectPaw.Others;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,9 @@ namespace proiectPaw.Forms.Orders
             SetupOrdersGrid();
             setupProductsGrid();
             LoadOrders();
-          
+            Helper.StyleForm(this);
+            Helper.StyleDataGrid(dataGridViewOrders);
+            Helper.StyleDataGrid(dataGridViewProducts);
         }
         private void SetupOrdersGrid()
         {

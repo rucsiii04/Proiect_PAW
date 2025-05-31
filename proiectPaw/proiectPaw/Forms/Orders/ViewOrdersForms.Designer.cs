@@ -1,4 +1,6 @@
-﻿namespace proiectPaw.Forms.Orders
+﻿using proiectPaw.Others;
+
+namespace proiectPaw.Forms.Orders
 {
     partial class ViewOrdersForms
     {
@@ -41,7 +43,7 @@
             this.dataGridViewOrders.Name = "dataGridViewOrders";
             this.dataGridViewOrders.RowHeadersWidth = 51;
             this.dataGridViewOrders.RowTemplate.Height = 24;
-            this.dataGridViewOrders.Size = new System.Drawing.Size(587, 416);
+            this.dataGridViewOrders.Size = new System.Drawing.Size(610, 416);
             this.dataGridViewOrders.TabIndex = 0;
             this.dataGridViewOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrders_CellContentClick);
             // 
@@ -67,7 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
             this.ResumeLayout(false);
-
+           
         }
 
         #endregion

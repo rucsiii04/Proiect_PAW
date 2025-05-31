@@ -121,6 +121,7 @@
     <Compile Include="Forms\Batch\ViewBatchesForm.Designer.cs">
       <DependentUpon>ViewBatchesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Others\Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Batch\EditBatchForm.resx">

@@ -1,4 +1,6 @@
-﻿namespace proiectPaw.Forms
+﻿using proiectPaw.Others;
+
+namespace proiectPaw.Forms
 {
     partial class AddBatchForm
     {
@@ -88,7 +90,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(420, 209);
+            this.saveButton.Location = new System.Drawing.Point(350, 209);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 6;
@@ -98,7 +100,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(552, 209);
+            this.cancelButton.Location = new System.Drawing.Point(497, 209);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 7;
@@ -123,7 +125,7 @@
             this.Text = "Adaugare lot";
             this.ResumeLayout(false);
             this.PerformLayout();
-
+           
         }
 
         #endregion

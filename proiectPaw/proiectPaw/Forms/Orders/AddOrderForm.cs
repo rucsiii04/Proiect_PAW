@@ -1,4 +1,5 @@
 ﻿using proiectPaw.Entities;
+using proiectPaw.Others;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,9 @@ namespace proiectPaw.Forms.Orders
             OrderIdToEdit = orderId;
             SetupDataGridProducts();
             LoadProducts();
+            Helper.StyleForm(this);
+            Helper.StyleButton(saveButton);
+            Helper.StyleButton(cancelButton);
             if (OrderIdToEdit.HasValue)
             {
                 Text = "Modifica comanda";

@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using proiectPaw.Others;
 
 namespace proiectPaw.Forms
 {
@@ -16,6 +15,9 @@ namespace proiectPaw.Forms
             this.productId = productId;
             LoadBatches();
             LoadProduct(productId);
+            Helper.StyleForm(this);
+            Helper.StyleButton(cancelButton);
+            Helper.StyleButton(updateButton);
         }
         private void LoadBatches()
         {
@@ -93,6 +95,11 @@ namespace proiectPaw.Forms
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

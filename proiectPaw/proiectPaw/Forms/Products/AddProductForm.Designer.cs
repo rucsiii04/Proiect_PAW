@@ -1,4 +1,6 @@
-﻿namespace proiectPaw.Forms
+﻿using proiectPaw.Others;
+
+namespace proiectPaw.Forms
 {
     partial class AddProductForm
     {
@@ -63,7 +65,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(474, 243);
+            this.buttonSave.Location = new System.Drawing.Point(286, 243);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(109, 23);
             this.buttonSave.TabIndex = 3;
@@ -117,7 +119,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(321, 243);
+            this.cancelButton.Location = new System.Drawing.Point(448, 243);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(109, 23);
             this.cancelButton.TabIndex = 9;
@@ -144,7 +146,7 @@
             this.Text = "Adaugare produs";
             this.ResumeLayout(false);
             this.PerformLayout();
-
+           
         }
 
         #endregion

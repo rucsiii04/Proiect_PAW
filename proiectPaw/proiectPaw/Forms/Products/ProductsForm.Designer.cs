@@ -1,4 +1,6 @@
-﻿namespace proiectPaw.Forms
+﻿using proiectPaw.Others;
+
+namespace proiectPaw.Forms
 {
     partial class ProductsForm
     {
@@ -39,14 +41,15 @@
             this.dataGridViewProducts.Name = "dataGridViewProducts";
             this.dataGridViewProducts.RowHeadersWidth = 51;
             this.dataGridViewProducts.RowTemplate.Height = 24;
-            this.dataGridViewProducts.Size = new System.Drawing.Size(1068, 426);
+            this.dataGridViewProducts.Size = new System.Drawing.Size(1036, 426);
             this.dataGridViewProducts.TabIndex = 0;
+            this.dataGridViewProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewProducts_CellContentClick);
             // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1092, 450);
+            this.ClientSize = new System.Drawing.Size(1047, 450);
             this.Controls.Add(this.dataGridViewProducts);
             this.Name = "ProductsForm";
             this.Text = "Vizualizare produse";

@@ -1,4 +1,6 @@
-﻿namespace proiectPaw
+﻿using proiectPaw.Others;
+
+namespace proiectPaw
 {
     partial class FormMain
     {
@@ -16,6 +18,7 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+
             }
             base.Dispose(disposing);
         }
@@ -34,11 +37,12 @@
             this.addProductButton = new System.Windows.Forms.Button();
             this.viewOrders = new System.Windows.Forms.Button();
             this.addOrder = new System.Windows.Forms.Button();
+            this.totalValueButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // viewProductsButton
             // 
-            this.viewProductsButton.Location = new System.Drawing.Point(105, 54);
+            this.viewProductsButton.Location = new System.Drawing.Point(37, 54);
             this.viewProductsButton.Name = "viewProductsButton";
             this.viewProductsButton.Size = new System.Drawing.Size(132, 23);
             this.viewProductsButton.TabIndex = 0;
@@ -48,7 +52,7 @@
             // 
             // viewBatchesButton
             // 
-            this.viewBatchesButton.Location = new System.Drawing.Point(105, 101);
+            this.viewBatchesButton.Location = new System.Drawing.Point(37, 101);
             this.viewBatchesButton.Name = "viewBatchesButton";
             this.viewBatchesButton.Size = new System.Drawing.Size(132, 23);
             this.viewBatchesButton.TabIndex = 1;
@@ -58,7 +62,7 @@
             // 
             // addBatchButton
             // 
-            this.addBatchButton.Location = new System.Drawing.Point(284, 101);
+            this.addBatchButton.Location = new System.Drawing.Point(216, 101);
             this.addBatchButton.Name = "addBatchButton";
             this.addBatchButton.Size = new System.Drawing.Size(128, 23);
             this.addBatchButton.TabIndex = 2;
@@ -68,7 +72,7 @@
             // 
             // addProductButton
             // 
-            this.addProductButton.Location = new System.Drawing.Point(284, 54);
+            this.addProductButton.Location = new System.Drawing.Point(216, 54);
             this.addProductButton.Name = "addProductButton";
             this.addProductButton.Size = new System.Drawing.Size(128, 23);
             this.addProductButton.TabIndex = 3;
@@ -78,7 +82,7 @@
             // 
             // viewOrders
             // 
-            this.viewOrders.Location = new System.Drawing.Point(105, 145);
+            this.viewOrders.Location = new System.Drawing.Point(37, 145);
             this.viewOrders.Name = "viewOrders";
             this.viewOrders.Size = new System.Drawing.Size(132, 23);
             this.viewOrders.TabIndex = 4;
@@ -88,7 +92,7 @@
             // 
             // addOrder
             // 
-            this.addOrder.Location = new System.Drawing.Point(284, 145);
+            this.addOrder.Location = new System.Drawing.Point(216, 145);
             this.addOrder.Name = "addOrder";
             this.addOrder.Size = new System.Drawing.Size(128, 23);
             this.addOrder.TabIndex = 5;
@@ -96,17 +100,30 @@
             this.addOrder.UseVisualStyleBackColor = true;
             this.addOrder.Click += new System.EventHandler(this.addOrder_Click);
             // 
+            // totalValueButton
+            // 
+            this.totalValueButton.Location = new System.Drawing.Point(37, 197);
+            this.totalValueButton.Name = "totalValueButton";
+            this.totalValueButton.Size = new System.Drawing.Size(307, 23);
+            this.totalValueButton.TabIndex = 6;
+            this.totalValueButton.Text = "Calculeaza valoare totala comenzi";
+            this.totalValueButton.UseVisualStyleBackColor = true;
+            this.totalValueButton.Click += new System.EventHandler(this.totalValueButton_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 245);
+            this.BackColor = System.Drawing.Color.Thistle;
+            this.ClientSize = new System.Drawing.Size(395, 245);
+            this.Controls.Add(this.totalValueButton);
             this.Controls.Add(this.addOrder);
             this.Controls.Add(this.viewOrders);
             this.Controls.Add(this.addProductButton);
             this.Controls.Add(this.addBatchButton);
             this.Controls.Add(this.viewBatchesButton);
             this.Controls.Add(this.viewProductsButton);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "FormMain";
             this.Text = "Pagina principala";
             this.ResumeLayout(false);
@@ -121,6 +138,7 @@
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Button viewOrders;
         private System.Windows.Forms.Button addOrder;
+        private System.Windows.Forms.Button totalValueButton;
     }
 }
 

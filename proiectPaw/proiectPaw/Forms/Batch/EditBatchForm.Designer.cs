@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using proiectPaw.Others;
+using System.Windows.Forms;
 
 namespace proiectPaw.Forms
 {
@@ -47,6 +48,7 @@ namespace proiectPaw.Forms
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 0;
             this.cancelButton.Text = "Anuleaza";
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // updateButton
             // 
@@ -55,6 +57,7 @@ namespace proiectPaw.Forms
             this.updateButton.Size = new System.Drawing.Size(75, 23);
             this.updateButton.TabIndex = 1;
             this.updateButton.Text = "Modifica";
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // quantityTextBox
             // 

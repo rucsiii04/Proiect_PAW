@@ -1,4 +1,6 @@
-﻿namespace proiectPaw.Forms
+﻿using proiectPaw.Others;
+
+namespace proiectPaw.Forms
 {
     partial class ViewBatchesForm
     {
@@ -53,7 +55,7 @@
             this.Text = "Vizualizare loturi";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBatches)).EndInit();
             this.ResumeLayout(false);
-
+        
         }
 
         #endregion

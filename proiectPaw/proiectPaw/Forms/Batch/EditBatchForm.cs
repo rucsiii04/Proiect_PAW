@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proiectPaw.Others;
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -12,6 +13,9 @@ namespace proiectPaw.Forms
             InitializeComponent();
             this.batchId = batchId;
             LoadBatchDetails();
+            Helper.StyleButton(cancelButton);
+            Helper.StyleButton(updateButton);
+            Helper.StyleForm(this);
         }
         private void LoadBatchDetails()
         {
@@ -72,18 +76,18 @@ namespace proiectPaw.Forms
                 {
                     MessageBox.Show("Lotul a fost actualizat cu succes.");
                     DialogResult = DialogResult.OK;
+                    Close();
                 }
                 else
                 {
                     MessageBox.Show("Lotul nu a putut fi actulizat!");
                 }
-                Close();
-               
             }
         }
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Close();
         }
+
     }
 }

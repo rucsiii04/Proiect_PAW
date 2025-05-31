@@ -1,5 +1,6 @@
 ﻿using proiectPaw.Forms;
 using proiectPaw.Forms.Orders;
+using proiectPaw.Others;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,14 @@ namespace proiectPaw
         public FormMain()
         {
             InitializeComponent();
+            Helper.StyleButton(viewOrders);
+            Helper.StyleButton(viewBatchesButton);
+            Helper.StyleButton(viewProductsButton);
+            Helper.StyleButton(addBatchButton);
+            Helper.StyleButton(addOrder);
+            Helper.StyleButton(addProductButton);
+            Helper.StyleLButton(totalValueButton);
+            Helper.StyleForm(this);
         }
         private void buttonOpenProducts_Click(object sender, EventArgs e)
         {
@@ -61,6 +70,22 @@ namespace proiectPaw
         {
             var adauga = new AddOrderForm();
             adauga.Show();
+        }
+        private void totalValueButton_Click(object sender, EventArgs e)
+        {
+            using (var conn = Database.CreateConnection())
+            {
+                conn.Open();
+                string query = @"SELECT SUM(p.Price * op.Quantity) AS TotalValue
+                                 FROM OrderProducts op
+                                 JOIN Products p ON p.Id = op.ProductId";
+                using (var cmd = new SqlCommand(query, conn))
+                {
+                    var result = cmd.ExecuteScalar();
+                    decimal total = Convert.ToDecimal(result ?? 0);
+                    MessageBox.Show($"Valoarea totala a comenzilor este: {total}", "Total comenzi");
+                }
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proiectPaw.Others;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -11,6 +12,9 @@ namespace proiectPaw.Forms
         {
             InitializeComponent();
             LoadBatches();
+            Helper.StyleButton(buttonSave);
+            Helper.StyleButton(cancelButton);
+            Helper.StyleForm(this);
         }
         private void LoadBatches()
         {

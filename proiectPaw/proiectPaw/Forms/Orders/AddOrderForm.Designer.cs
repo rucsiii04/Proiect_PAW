@@ -1,4 +1,6 @@
-﻿namespace proiectPaw.Forms.Orders
+﻿using proiectPaw.Others;
+
+namespace proiectPaw.Forms.Orders
 {
     partial class AddOrderForm
     {
@@ -92,7 +94,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(291, 381);
+            this.saveButton.Location = new System.Drawing.Point(263, 381);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(105, 23);
             this.saveButton.TabIndex = 7;
@@ -102,7 +104,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(402, 381);
+            this.cancelButton.Location = new System.Drawing.Point(434, 381);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(84, 23);
             this.cancelButton.TabIndex = 8;
@@ -128,7 +130,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
+         
         }
 
         #endregion

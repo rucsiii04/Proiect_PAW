@@ -1,4 +1,5 @@
-﻿using System;
+﻿using proiectPaw.Others;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace proiectPaw.Forms
             dataGridViewBatches.AutoGenerateColumns = false;
             SetupDataGridView();
             LoadBatches();
+            Helper.StyleForm(this);
+            Helper.StyleDataGrid(dataGridViewBatches);
         }
         private void SetupDataGridView()
         {
